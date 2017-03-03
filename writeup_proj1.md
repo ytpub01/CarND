@@ -13,33 +13,35 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: grayscale.jpg "Grayscale"
 
 ---
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+###1. My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied Canny edge detection, then a polygonal mask to delimit theregion of interest, then the Hough trasnform, which returns a bunch of lines.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+In order to draw a single line on the left and right lanes, I collected the slopes and classified the slopes into left lane or right lane according to the direction of the slope, then I averaged each of the right and left slopes and then used these slopes to classify the lines as left or right. Then I extended the left and right lines each into one solid left line and one solid right line, and colored it red.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+Here are the static photo results:
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+![Solid White Curve][solidWhiteCurve-result.jpg]
+![Solid White Right][solidWhiteRight-result.jpg]
+![Solid Yellow Curve][solidYellowCurve-result.jpg]
+![Solid WYellow Curve 2][solidYellowCurve2-result.jpg]
+![Solid Yellow Left][solidYellowLeft-result.jpg]
+![White Car Lane Switch][whiteCarLaneSwitch-result.jpg]
 
-![alt text][image1]
-
-
-###2. Identify potential shortcomings with your current pipeline
-
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+###2. Potential shortcomings with your current pipeline:
 
 
-###3. Suggest possible improvements to your pipeline
+The lane finding I have works but is not stable. It crashes in the extra challenge video.  
 
-A possible improvement would be to ...
+Another shortcoming is my code is too long.
 
-Another potential improvement could be to ...
+
+###3. Possible improvements to the pipeline
+
+A possible improvement would be to discard lines which are neither left nor right (i.e. parasites) from the list of lines.
+
+Another potential improvement could be to modularize the code.
