@@ -25,12 +25,12 @@ In order to draw a single line on the left and right lanes, I collected the slop
 
 Here are the static photo results:
 
-![Solid White Curve][solidWhiteCurve-result.jpg]
-![Solid White Right][solidWhiteRight-result.jpg]
-![Solid Yellow Curve][solidYellowCurve-result.jpg]
-![Solid WYellow Curve 2][solidYellowCurve2-result.jpg]
-![Solid Yellow Left][solidYellowLeft-result.jpg]
-![White Car Lane Switch][whiteCarLaneSwitch-result.jpg]
+![Solid White Curve]:[solidWhiteCurve-result.jpg]
+![Solid White Right]:[solidWhiteRight-result.jpg]
+![Solid Yellow Curve]:[solidYellowCurve-result.jpg]
+![Solid WYellow Curve 2]:[solidYellowCurve2-result.jpg]
+![Solid Yellow Left]:[solidYellowLeft-result.jpg]
+![White Car Lane Switch]:[whiteCarLaneSwitch-result.jpg]
 
 ###2. Potential shortcomings with your current pipeline:
 
